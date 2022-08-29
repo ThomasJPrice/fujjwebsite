@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fujj.</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.svg">
+    <script src="https://kit.fontawesome.com/ceb36731d2.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <section id="landing">
+        <nav>
+            <div class="nav__container">
+                <h1 class="logo">Fujj.</h1>
+                <ul class="nav__links">
+                    <li><a href="#" class="nav__link link__hover-effect">Home</a></li>
+                    <li><a href="./faqs.html" class="nav__link link__hover-effect">FAQs</a></li>
+                    <li><a href="./products.html" class="nav__link nav__link--primary">Shop Now</a></li>
+                </ul>
+                <div class="shopping-cart">
+                    <i class="fa-solid fa-cart-shopping first-cart" id="cart-icon"></i>
+                </div>
+
+                <!-- CART  -->
+                <div class="cart-modal">
+                    <h2 class="cart-title">Your Cart</h2>
+
+                    <div class="cart-content">
+                    </div>
+
+                    <!-- TOTAL -->
+                    <div class="total">
+                        <div class="total-title">Total</div>
+                        <div class="total-price">£0</div>
+                    </div>
+                    <!-- CHECKOUT -->
+                    <form action="/create-checkout-session" method="POST">
+                        <input type="hidden" name="product_sku" value="Unknown" id="price_skus" />
+                        <!-- <input type="hidden" name="user_address" value="Unknown" id="user_address">
+                        <input type="hidden" name="shipping" value="standard" id="shipping_price"> -->
+                        <button type="submit" class="checkout-button buy-button">Checkout</button>
+                    </form>
+                    <i class="bx bx-x" id="close-cart"></i>
+                </div>
+                <!-- CART OVER -->
+                <button class="btn__menu" onclick="openMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="menu__backdrop">
+                    <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul class="menu__links">
+                        <li class="menu__list">
+                            <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
+                        </li>
+                        <li class="menu__list">
+                            <a href="./faqs.html" class="menu__link" onclick="closeMenu()">FAQs</a>
+                        </li>
+                        <li class="menu__list">
+                            <a href="#features" class="menu__link no-cursor" onclick="closeMenu()">Shop Now</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <header>
+            <div class="header__container">
+                <div class="header__description">
+                    <h1 class="header__title">We are Fujj.</h1>
+                    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </h2>
+                    <a href="#features" class="button--main">Shop Now</a>
+                </div>
+                <figure class="header__img--wrapper">
+                    <img src="assets/fujj-bar--shadow.png" class="header__img" alt="">
+                </figure>
+            </div>
+        </header>
+        <a href="#">
+            <button class="checkout__btn click" onclick="checkout()">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p class="checkout__cart">Checkout</p>
+            </button>
+        </a>
+    </section>
+    <section id="features">
+        <h1 class="features--title">Featured Products</h1>
+        <div class="featured-product__wrapper">
+            <div class="feature feature--reverse">
+                <figure class="feature--img__wrapper">
+                    <img src="./assets/no-image.png" alt="" class="feature--img product-img">
+                </figure>
+                <div class="feature__text">
+                    <h2 class="feature--title link__hover-effect--feature product-title">The Originals 1</h2>
+                    <p class="feature--description">Take the original flavours from the past and combine with our
+                        special recipe to get something truly nostalgic.</p>
+                    <div class="pricing--cart">
+                        <h3 class="feature--price product-price" id="price_1LY9CaARYjIsWfAVhoTPG5Ti">£5.00</h3>
+                        <button class="button add-cart">
+                            <p>Add to cart</p>
+                            <div class="cart">
+                                <svg viewBox="0 0 36 26">
+                                    <polyline points="1 2.5 6 2.5 10 18.5 25.5 18.5 28.5 7.5 7.5 7.5"></polyline>
+                                    <polyline points="15 13.5 17 15.5 22 10.5"></polyline>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="feature feature--reverse">
+                <figure class="feature--img__wrapper">
+                    <img src="./assets/no-image.png" alt="" class="feature--img product-img">
+                </figure>
+                <div class="feature__text">
+                    <h2 class="feature--title link__hover-effect--feature product-title">The Originals 2</h2>
+                    <p class="feature--description">Take the original flavours from the past and combine with our
+                        special recipe to get something truly nostalgic.</p>
+                    <div class="pricing--cart">
+                        <h3 class="feature--price product-price" id="price_1LY9CnARYjIsWfAVCj3ZZ3zn">£5.00</h3>
+                        <button class="button add-cart">
+                            <p>Add to cart</p>
+                            <div class="cart">
+                                <svg viewBox="0 0 36 26">
+                                    <polyline points="1 2.5 6 2.5 10 18.5 25.5 18.5 28.5 7.5 7.5 7.5"></polyline>
+                                    <polyline points="15 13.5 17 15.5 22 10.5"></polyline>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="feature feature--reverse">
+                <figure class="feature--img__wrapper">
+                    <img src="./assets/no-image.png" alt="" class="feature--img product-img">
+                </figure>
+                <div class="feature__text">
+                    <h2 class="feature--title link__hover-effect--feature product-title">The Originals 3</h2>
+                    <p class="feature--description">Take the original flavours from the past and combine with our
+                        special recipe to get something truly nostalgic.</p>
+                    <div class="pricing--cart">
+                        <h3 class="feature--price product-price" id="price_1LY9CvARYjIsWfAV6EYl7lXG">£5.00</h3>
+                        <button class="button add-cart">
+                            <p>Add to cart</p>
+                            <div class="cart">
+                                <svg viewBox="0 0 36 26">
+                                    <polyline points="1 2.5 6 2.5 10 18.5 25.5 18.5 28.5 7.5 7.5 7.5"></polyline>
+                                    <polyline points="15 13.5 17 15.5 22 10.5"></polyline>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="button--center">
+            <a href="products.html" class="button--main button--width button--center">Browse all products</a>
+        </div>
+    </section>
+    <section id="reviews">
+        <h1 class="reviews--title">What our customers say...</h1>
+        <div class="review__container">
+            <div class="review">
+                <h2 class="review--title">Quick and Responsive</h2>
+                <div class="review--rating">
+                    <a class="fas fa-star"></a>
+                    <a class="fas fa-star"></a>
+                    <a class="fas fa-star"></a>
+                    <a class="fas fa-star"></a>
+                    <a class="fas fa-star"></a>
+                </div>
+                <p class="review--description">Placed a bespoke order, really quick and responsive and lush tasting too!
+                </p>
+                <h3 class="review--author">Soosie B</h3>
+            </div>
+            <div class="review">
+                <h2 class="review--title">SO Impressed!</h2>
+                <div class="review--rating">
+                    <a class="fas fa-star"></a>
+                    <a class="fas fa-star"></a>
+                    <a class="fas fa-star"></a>
+                    <a class="fas fa-star"></a>
+                    <a class="fas fa-star"></a>
+                </div>
+                <p class="review--description">I am a real fudge fan and was SO impressed with my order from Fujj. All 3
+                    flavors I had tasted amazing! - I will definitely be ordering again, thank you.</p>
+                <h3 class="review--author">Lucy W</h3>
+            </div>
+            <div class="review">
+                <h2 class="review--title">Absolutely Delicious</h2>
+                <div class="review--rating">
+                    <a class="fas fa-star"></a>
+                    <a class="fas fa-star"></a>
+                    <a class="fas fa-star"></a>
+                    <a class="fas fa-star"></a>
+                    <a class="fas fa-star"></a>
+                </div>
+                <p class="review--description">Highly recommend Fujj, amazingly friendly service, prompt delivery and
+                    absolutely delicious Fudge! Will be buying again!</p>
+                <h3 class="review--author">Michelle M</h3>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER  -->
+    <footer>
+        <div class="container">
+            <div class="row footer__row">
+
+                <figure>
+                    <a href="#"><img src="./assets/favicon.svg" class="footer__logo--img" alt=""></a>
+                </figure>
+                <div class="footer__social--list">
+                    <a href="https://www.facebook.com/fujjcompany" target="_blank"
+                        class="footer__social--link">Facebook</a>
+                    <a href="https://www.instagram.com/fujjcompany/" target="_blank"
+                        class="footer__social--link">Instagram</a>
+
+                </div>
+                <div class="footer__copyright">Copyright © 2022 Thomas Price</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/index.js"></script>
+</body>
+
+</html>

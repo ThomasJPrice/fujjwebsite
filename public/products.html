@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fujj. | Products</title>
+    <link rel="stylesheet" href="/css/products.css">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.svg">
+    <script src="https://kit.fontawesome.com/ceb36731d2.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <section id="landing">
+        <nav>
+            <div class="nav__container">
+                <h1 class="logo">Fujj.</h1>
+                <ul class="nav__links">
+                    <li><a href="./index.html" class="nav__link link__hover-effect">Home</a></li>
+                    <li><a href="./faqs.html" class="nav__link link__hover-effect">FAQs</a></li>
+                    <li><a href="#" class="nav__link nav__link--primary">Shop Now</a></li>
+                </ul>
+                <div class="shopping-cart">
+                    <i class="fa-solid fa-cart-shopping first-cart" id="cart-icon"></i>
+                </div>
+
+                <!-- CART  -->
+                <div class="cart-modal">
+                    <h2 class="cart-title">Your Cart</h2>
+
+                    <div class="cart-content">
+                    </div>
+
+                    <!-- TOTAL -->
+                    <div class="total">
+                        <div class="total-title">Total</div>
+                        <div class="total-price">£0</div>
+                    </div>
+                    <!-- CHECKOUT -->
+                    <form action="/create-checkout-session" method="POST">
+                        <input type="hidden" name="product_sku" value="Unknown" id="price_skus" />
+                        <!-- <input type="hidden" name="user_address" value="Unknown" id="user_address">
+                        <input type="hidden" name="shipping" value="standard" id="shipping_price"> -->
+                        <button type="submit" class="checkout-button buy-button">Checkout</button>
+                    </form>
+                    <i class="bx bx-x" id="close-cart"></i>
+                </div>
+                <!-- CART OVER -->
+                <button class="btn__menu" onclick="openMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="menu__backdrop">
+                    <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul class="menu__links">
+                        <li class="menu__list">
+                            <a href="./index.html" class="menu__link" onclick="closeMenu()">Home</a>
+                        </li>
+                        <li class="menu__list">
+                            <a href="./faqs.html" class="menu__link" onclick="closeMenu()">FAQs</a>
+                        </li>
+                        <li class="menu__list">
+                            <a href="#" class="menu__link no-cursor" onclick="closeMenu()">Shop Now</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <a href="#">
+            <button class="checkout__btn click" onclick="checkout()">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p class="checkout__cart">Checkout</p>
+            </button>
+        </a>
+    </section>
+
+
+    <section id="products">
+        <h1 class="products--title">Browse All Bars</h1>
+        <div class="products--container">
+            <i class="fas fa-spinner books__loading--spinner"></i>
+        </div>
+    </section>
+
+
+
+    <!-- FOOTER  -->
+    <footer>
+        <div class="container">
+            <div class="row footer__row">
+
+                <figure>
+                    <a href="index.html"><img src="./assets/favicon.svg" class="footer__logo--img" alt=""></a>
+                </figure>
+                <div class="footer__social--list">
+                    <a href="https://www.facebook.com/fujjcompany" target="_blank"
+                        class="footer__social--link">Facebook</a>
+                    <a href="https://www.instagram.com/fujjcompany/" target="_blank"
+                        class="footer__social--link">Instagram</a>
+
+                </div>
+                <div class="footer__copyright">Copyright © 2022 Thomas Price</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/products.js"></script>
+</body>
+
+</html>

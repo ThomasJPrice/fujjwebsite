@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fujj. | FAQs</title>
+    <link rel="stylesheet" href="/css/faqs.css">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.svg">
+    <script src="https://kit.fontawesome.com/ceb36731d2.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <section id="faqs">
+        <nav>
+            <div class="nav__container">
+                <h1 class="logo">Fujj.</h1>
+                <ul class="nav__links">
+                    <li><a href="./index.html#" class="nav__link link__hover-effect">Home</a></li>
+                    <li><a href="#" class="nav__link link__hover-effect">FAQs</a></li>
+                    <li><a href="./products.html" class="nav__link nav__link--primary">Shop Now</a></li>
+                </ul>
+
+                <div class="shopping-cart">
+                    <i class="fa-solid fa-cart-shopping first-cart" id="cart-icon"></i>
+                </div>
+
+                <!-- CART  -->
+                <div class="cart-modal">
+                    <h2 class="cart-title">Your Cart</h2>
+
+                    <div class="cart-content">
+                    </div>
+
+                    <!-- TOTAL -->
+                    <div class="total">
+                        <div class="total-title">Total</div>
+                        <div class="total-price">£0</div>
+                    </div>
+                    <!-- CHECKOUT -->
+                    <form action="/create-checkout-session" method="POST">
+                        <input type="hidden" name="product_sku" value="Unknown" id="price_skus" />
+                        <!-- <input type="hidden" name="user_address" value="Unknown" id="user_address">
+                        <input type="hidden" name="shipping" value="standard" id="shipping_price"> -->
+                        <button type="submit" class="checkout-button buy-button">Checkout</button>
+                    </form>
+                    <i class="bx bx-x" id="close-cart"></i>
+                </div>
+                <!-- CART OVER -->
+
+                <button class="btn__menu" onclick="openMenu()">
+                    <a class="fas fa-bars"></a>
+                </button>
+                <div class="menu__backdrop">
+                    <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul class="menu__links">
+                        <li class="menu__list">
+                            <a href="index.html" class="menu__link" onclick="closeMenu()">Home</a>
+                        </li>
+                        <li class="menu__list">
+                            <a href="#" class="menu__link" onclick="closeMenu()">FAQs</a>
+                        </li>
+                        <li class="menu__list">
+                            <a href="./index.html#features" class="menu__link no-cursor" onclick="closeMenu()">Shop
+                                Now</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <header>
+            <div class="header__container">
+                <h1 class="faqs--title">Frequently Asked Questions</h1>
+                <div class="faqs">
+                    <div class="faq">
+                        <h3 class="faq--question">How much is delivery?</h2>
+                            <p class="faq--answer">Our standard delivery is £2.99 per order but if you live in Bedford,
+                                Wixams, Wilstead, Shortstown, Elstow or Kempston and your order exceeds £4.99, we will
+                                personally deliver it free of charge. We usually do our local deliveries on Sundays, so
+                                if
+                                you need your order earlier than than, get in touch and we'll see what we can do.</p>
+                    </div>
+                    <div class="faq">
+                        <h3 class="faq--question">How much is delivery?</h2>
+                            <p class="faq--answer">Our standard delivery is £2.99 per order but if you live in Bedford,
+                                Wixams, Wilstead, Shortstown, Elstow or Kempston and your order exceeds £4.99, we will
+                                personally deliver it free of charge. We usually do our local deliveries on Sundays, so
+                                if
+                                you need your order earlier than than, get in touch and we'll see what we can do.</p>
+                    </div>
+                    <div class="faq">
+                        <h3 class="faq--question">How much is delivery?</h2>
+                            <p class="faq--answer">Our standard delivery is £2.99 per order but if you live in Bedford,
+                                Wixams, Wilstead, Shortstown, Elstow or Kempston and your order exceeds £4.99, we will
+                                personally deliver it free of charge. We usually do our local deliveries on Sundays, so
+                                if
+                                you need your order earlier than than, get in touch and we'll see what we can do.</p>
+                    </div>
+                    <div class="faq">
+                        <h3 class="faq--question">How much is delivery?</h2>
+                            <p class="faq--answer">Our standard delivery is £2.99 per order but if you live in Bedford,
+                                Wixams, Wilstead, Shortstown, Elstow or Kempston and your order exceeds £4.99, we will
+                                personally deliver it free of charge. We usually do our local deliveries on Sundays, so
+                                if
+                                you need your order earlier than than, get in touch and we'll see what we can do.</p>
+                    </div>
+                    <div class="faq">
+                        <h3 class="faq--question">How much is delivery?</h2>
+                            <p class="faq--answer">Our standard delivery is £2.99 per order but if you live in Bedford,
+                                Wixams, Wilstead, Shortstown, Elstow or Kempston and your order exceeds £4.99, we will
+                                personally deliver it free of charge. We usually do our local deliveries on Sundays, so
+                                if
+                                you need your order earlier than than, get in touch and we'll see what we can do.</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <a href="#">
+            <button class="checkout__btn click" onclick="checkout()">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p class="checkout__cart">Checkout</p>
+            </button>
+        </a>
+    </section>
+
+    <section id="allergens">
+        <h1 class="allergens--title">Allergen Information</h1>
+        <h2 class="allergens--sub-title">We take every care to ensure our products are free from allergens (unless
+            otherwise stated on the description and packaging) however please advise us if you have an allergy we need
+            to be aware of.</h2>
+        <div class="button">
+            <a href="./assets/fujj-allergen-info.pdf" target="_blank"
+                class="allergens--download button--main">Download Info</a>
+        </div>
+    </section>
+
+    <!-- FOOTER  -->
+    <footer>
+        <div class="container">
+            <div class="row footer__row">
+
+                <figure>
+                    <a href="index.html"><img src="./assets/favicon.svg" class="footer__logo--img" alt=""></a>
+                </figure>
+                <div class="footer__social--list">
+                    <a href="https://www.facebook.com/fujjcompany" target="_blank"
+                        class="footer__social--link">Facebook</a>
+                    <a href="https://www.instagram.com/fujjcompany/" target="_blank"
+                        class="footer__social--link">Instagram</a>
+                </div>
+                <div class="footer__copyright">Copyright © 2022 Thomas Price</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/faqs.js"></script>
+</body>
+
+</html>
