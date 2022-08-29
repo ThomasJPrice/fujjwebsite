@@ -5,16 +5,13 @@ const express = require('express');
 var bodyParser = require('body-parser')
 var app = express()
 
-const hostname = "localhost"
-const port = 4242
-
 // parse application/json
 app.use(bodyParser.json())
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(express.static('public'));
-const YOUR_DOMAIN = `http://${hostname}:${port}/`;
+const YOUR_DOMAIN = `https://fujjwebsite.vercel.app`;
 app.post('/create-checkout-session', async (req, res) => {
 
   var lineItems = []
@@ -61,4 +58,4 @@ app.post('/create-checkout-session', async (req, res) => {
   res.redirect(303, session.url);
 });
 
-app.listen(port, hostname, YOUR_DOMAIN, () => console.log(`Running at ${YOUR_DOMAIN}`));
+app.listen(4242, () => console.log(`Running at 4242`));
