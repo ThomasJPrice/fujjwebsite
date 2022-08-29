@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(express.static('public'));
 const YOUR_DOMAIN = `https://fujjwebsite.vercel.app`;
-app.post('/create-checkout-session', async (req, res) => {
+app.post('/create-checkout-session.html', async (req, res) => {
 
   var lineItems = []
   var productPrices = req.body.product_sku
