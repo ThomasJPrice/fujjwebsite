@@ -112,7 +112,8 @@ body::-webkit-scrollbar-thumb {
 /* NAV BAR */
 
 .logo {
-    width: 160px;
+    width: 80px;
+    height: 80px;
     font-size: 40px;
     cursor: default;
 }
@@ -190,7 +191,8 @@ body::-webkit-scrollbar-thumb {
     visibility: hidden;
     transition: all 300ms ease;
     opacity: 0;
-    transform: translate(100%);
+    width: 100%;
+    height: 100%;
 }
 
 .menu--open {
@@ -921,5 +923,17 @@ footer {
 @media (max-width: 420px) {
     .product {
         width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .cart-modal {
+        width: 320px;
+    }
+}
+
+@media (max-width: 360px) {
+    .cart-modal {
+        width: 280px;
     }
 }
