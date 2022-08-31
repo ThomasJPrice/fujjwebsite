@@ -4,6 +4,7 @@ const { response } = require('express');
 const express = require('express');
 var bodyParser = require('body-parser')
 var app = express()
+var os = require("os");
 
 // parse application/json
 app.use(bodyParser.json())
@@ -11,7 +12,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(express.static('public'));
-const YOUR_DOMAIN = `https://fujjwebsite.vercel.app`;
+const YOUR_DOMAIN = 'https://fujj.cyclic.app'
 app.post('/create-checkout-session', async (req, res) => {
 
   var lineItems = []
@@ -51,7 +52,7 @@ app.post('/create-checkout-session', async (req, res) => {
     // discounts: [{
     //   coupon: 'CVyZruQp',
     // }],
-    success_url: `${YOUR_DOMAIN}/index.html`,
+    success_url: `${YOUR_DOMAIN}/success.html`,
     cancel_url: `${YOUR_DOMAIN}/index.html`,
   });
 
