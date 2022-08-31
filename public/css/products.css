@@ -115,7 +115,7 @@ body::-webkit-scrollbar-thumb {
     width: 80px;
     height: 80px;
     font-size: 40px;
-    cursor: default;
+    cursor: pointer;
 }
 
 .nav__container {
@@ -530,7 +530,6 @@ h2 {
 }
 
 .product:hover .product--title {
-    text-decoration: underline;
 }
 
 .products__loading {
