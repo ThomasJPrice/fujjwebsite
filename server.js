@@ -16,8 +16,11 @@ const YOUR_DOMAIN = 'https://fujj.cyclic.app'
 app.post('/create-checkout-session', async (req, res) => {
 
   var lineItems = []
+  var totalQuantity = 0
+  var discountAmount = 0
   var productPrices = req.body.product_sku
   var arr = productPrices.split(',')
+  var discountArray = []
 
   for (i = 0; i < arr.length; i++) {
     if (i % 2 == 0) {
@@ -28,8 +31,29 @@ app.post('/create-checkout-session', async (req, res) => {
           quantity: `${arr[i + 1]}`
         },
       )
+
+      totalQuantity = totalQuantity + parseInt(arr[i + 1])
     }
   }
+
+  if (totalQuantity < 3) {
+    discountAmount = 0
+  }
+  else if (totalQuantity % 3 == 0) {
+    discountAmount = totalQuantity / 3
+  }
+  else if ((totalQuantity - 1) % 3 == 0) {
+    discountAmount = (totalQuantity - 1) / 3
+  }
+  else if ((totalQuantity - 2) % 3 == 0) {
+    discountAmount = (totalQuantity - 2) / 3
+  }
+
+  var discountCost = discountAmount * 67
+  const coupon = await stripe.coupons.create({amount_off: discountCost, id: "3Barsfor5", currency: "GBP"});
+  discountArray.push({
+    coupon: '3Barsfor5',
+  })
 
   const session = await stripe.checkout.sessions.create({
     submit_type: "pay",
@@ -48,13 +72,15 @@ app.post('/create-checkout-session', async (req, res) => {
     ],
     line_items: lineItems,
     mode: 'payment',
-    allow_promotion_codes: true,
-    // discounts: [{
-    //   coupon: 'CVyZruQp',
-    // }],
+    discounts: discountArray,
     success_url: `${YOUR_DOMAIN}/success.html`,
     cancel_url: `${YOUR_DOMAIN}/index.html`,
   });
+
+  const deleted = await stripe.coupons.del(
+    coupon.id
+  );
+
 
   res.redirect(303, session.url);
 });
