@@ -175,7 +175,7 @@ function addCartClicked(event) {
     var title = shopProducts.getElementsByClassName('product--title')[0].innerText
     var price = shopProducts.getElementsByClassName('product--price')[0].innerText
     var priceSKU = shopProducts.getElementsByClassName('product--price')[0].id
-    var productImg = shopProductsImg.getElementsByClassName('product--img')[0].src
+    var productImg = shopProducts.getElementsByClassName('product--img')[0].src
 
     addProductToCart(title, price, productImg, priceSKU, button)
     updatetotal()
@@ -324,51 +324,27 @@ function getProducts() {
             resolve([
                 {
                     id: 1,
-                    title: "The Originals 1",
-                    amount: 300,
-                    price: 5,
-                    SKU: "price_1LY9CaARYjIsWfAVhoTPG5Ti",
-                    image: "./assets/no-image.png"
+                    title: "Salted Caramel",
+                    amount: 100,
+                    price: 1.89,
+                    SKU: "price_1Ld6sQARYjIsWfAVVHGqikNu",
+                    image: "./assets/products/transparent-caramel-nobg.png"
                 },
                 {
                     id: 2,
-                    title: "The Originals 2",
-                    amount: 300,
-                    price: 5,
-                    SKU: "price_1LY9CnARYjIsWfAVCj3ZZ3zn",
-                    image: "./assets/no-image.png"
+                    title: "Marvellous Mars",
+                    amount: 100,
+                    price: 1.89,
+                    SKU: "price_1Ld6s5ARYjIsWfAV1BvKOl7R",
+                    image: "./assets/products/transparent-mars-nobg.png"
                 },
                 {
                     id: 3,
-                    title: "The Originals 3",
-                    amount: 300,
-                    price: 5,
-                    SKU: "price_1LY9CvARYjIsWfAV6EYl7lXG",
-                    image: "./assets/no-image.png"
-                },
-                {
-                    id: 3,
-                    title: "The Originals 3",
-                    amount: 300,
-                    price: 5,
-                    SKU: "price_1LY9CvARYjIsWfAV6EYl7lXG",
-                    image: "./assets/no-image.png"
-                },
-                {
-                    id: 3,
-                    title: "The Originals 3",
-                    amount: 300,
-                    price: 5,
-                    SKU: "price_1LY9CvARYjIsWfAV6EYl7lXG",
-                    image: "./assets/no-image.png"
-                },
-                {
-                    id: 3,
-                    title: "The Originals 3",
-                    amount: 300,
-                    price: 5,
-                    SKU: "price_1LY9CvARYjIsWfAV6EYl7lXG",
-                    image: "./assets/no-image.png"
+                    title: "Unicorn Crunch",
+                    amount: 100,
+                    price: 1.89,
+                    SKU: "price_1Ld6rdARYjIsWfAVf1ZTY8d7",
+                    image: "./assets/products/transparent-m&m-nobg.png"
                 }
             ]);
         }, 1000);

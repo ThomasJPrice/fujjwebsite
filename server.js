@@ -1,5 +1,5 @@
 // This is your test secret API key.
-const stripe = require('stripe')('sk_test_51KaOEvARYjIsWfAVtTHpoPYOkAI8jojTDYH3pbJb0Tot0i8DkoTW4GhJHPC0Bql0aimMkQUvbocGo508mV6AvUnl00UuCWY05e');
+const stripe = require('stripe')(process.env.STRIPE_SECRET);
 const { response } = require('express');
 const express = require('express');
 var bodyParser = require('body-parser')
@@ -50,11 +50,14 @@ app.post('/create-checkout-session', async (req, res) => {
   }
 
   var discountCost = discountAmount * 67
-  const coupon = await stripe.coupons.create({amount_off: discountCost, id: "3Barsfor5", currency: "GBP"});
-  discountArray.push({
-    coupon: '3Barsfor5',
-  })
 
+  if (discountCost > 0) {
+    const coupon = await stripe.coupons.create({amount_off: discountCost, id: "3Barsfor5", currency: "GBP"});
+    discountArray.push({
+      coupon: '3Barsfor5',
+    })
+  }
+  
   const session = await stripe.checkout.sessions.create({
     submit_type: "pay",
     billing_address_collection: 'auto',
@@ -64,10 +67,10 @@ app.post('/create-checkout-session', async (req, res) => {
     },
     shipping_options: [
       {
-        shipping_rate: "shr_1LV8PMARYjIsWfAVqLfR10wB",
+        shipping_rate: "shr_1Ld74VARYjIsWfAVXs3msYno",
       },
       {
-        shipping_rate: "shr_1LV8OvARYjIsWfAVbfxNScX1",
+        shipping_rate: "shr_1Ld74mARYjIsWfAVXiUPE5dP",
       },
     ],
     line_items: lineItems,
@@ -77,9 +80,11 @@ app.post('/create-checkout-session', async (req, res) => {
     cancel_url: `${YOUR_DOMAIN}/index.html`,
   });
 
-  const deleted = await stripe.coupons.del(
-    coupon.id
-  );
+  if (discountCost > 0) {
+    const deleted = await stripe.coupons.del(
+      '3Barsfor5'
+    );
+  }
 
 
   res.redirect(303, session.url);

@@ -430,10 +430,11 @@ h2 {
 
 .header__img {
     transition: all 300ms ease;
+    transform: scale(0.9);
 }
 
 .header__img--wrapper:hover .header__img {
-    transform: scale(1.03);
+    transform: scale(0.93);
 }
 
 .button--main {
