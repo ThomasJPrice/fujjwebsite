@@ -290,6 +290,7 @@ body::-webkit-scrollbar-thumb {
     height: 110px;
     object-fit: contain;
     padding: 10px;
+    transform: scale(1.4);
 }
 
 .detail-box {

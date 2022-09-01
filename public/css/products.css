@@ -352,6 +352,7 @@ h2 {
     height: 110px;
     object-fit: contain;
     padding: 10px;
+    transform: scale(1.4);
 }
 
 .detail-box {
@@ -523,10 +524,11 @@ h2 {
     object-fit: contain;
     object-position: left;
     width: 100%;
+    transform: scale(1.4);
 }
 
 .product:hover .product--img {
-    transform: scale(1.03);
+    transform: scale(1.43);
 }
 
 .product:hover .product--title {

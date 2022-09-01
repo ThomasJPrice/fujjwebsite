@@ -324,27 +324,115 @@ function getProducts() {
             resolve([
                 {
                     id: 1,
+                    title: "Biscoff",
+                    amount: 100,
+                    price: 1.89,
+                    SKU: "price_1LdDtQARYjIsWfAVobLR3vzE",
+                    image: "https://i.ibb.co/TvjL9mf/blank.png"
+                },
+                {
+                    id: 2,
+                    title: "Chocolate Orange",
+                    amount: 100,
+                    price: 1.89,
+                    SKU: "price_1LdDrlARYjIsWfAVg1QXbHJf",
+                    image: "https://i.ibb.co/TvjL9mf/blank.png"
+                },
+                {
+                    id: 3,
+                    title: "Cookies and Cream",
+                    amount: 100,
+                    price: 1.89,
+                    SKU: "price_1LdDsuARYjIsWfAVQYyMppPa",
+                    image: "https://i.ibb.co/TvjL9mf/blank.png"
+                },
+                {
+                    id: 4,
+                    title: "Fruit & Nut",
+                    amount: 100,
+                    price: 1.89,
+                    SKU: "price_1LdDtHARYjIsWfAVAhjIwdL3",
+                    image: "https://i.ibb.co/TvjL9mf/blank.png"
+                },
+                {
+                    id: 5,
+                    title: "Fujj Brownie",
+                    amount: 100,
+                    price: 1.89,
+                    SKU: "price_1LdDt6ARYjIsWfAV9GXcpkjS",
+                    image: "https://i.ibb.co/TvjL9mf/blank.png"
+                },
+                {
+                    id: 6,
+                    title: "Honeycomb Crunch",
+                    amount: 100,
+                    price: 1.89,
+                    SKU: "price_1LdDs4ARYjIsWfAVbiwvo2P2",
+                    image: "https://i.ibb.co/TvjL9mf/blank.png"
+                },
+                {
+                    id: 7,
+                    title: "Momentous Mars",
+                    amount: 100,
+                    price: 1.89,
+                    SKU: "price_1Ld6s5ARYjIsWfAV1BvKOl7R",
+                    image: "https://i.ibb.co/9VTQhXv/mars.png"
+                },
+                {
+                    id: 8,
+                    title: "Marvellous Mint",
+                    amount: 100,
+                    price: 1.89,
+                    SKU: "price_1LdDsHARYjIsWfAVciBQNXP2",
+                    image: "https://i.ibb.co/TvjL9mf/blank.png"
+                },
+                {
+                    id: 9,
+                    title: "Milkyway",
+                    amount: 100,
+                    price: 1.89,
+                    SKU: "price_1LdDoBARYjIsWfAV72IQaLg2",
+                    image: "https://i.ibb.co/pj9xwRW/milkyway.png"
+                },
+                {
+                    id: 10,
+                    title: "Mmm-Teasers",
+                    amount: 100,
+                    price: 1.89,
+                    SKU: "price_1LdDsfARYjIsWfAVZd0ai5V1",
+                    image: "https://i.ibb.co/TvjL9mf/blank.png"
+                },
+                {
+                    id: 11,
+                    title: "Peanut Butter",
+                    amount: 100,
+                    price: 1.89,
+                    SKU: "price_1LdDrZARYjIsWfAVx99sCxk2",
+                    image: "https://i.ibb.co/TvjL9mf/blank.png"
+                },
+                {
+                    id: 12,
                     title: "Salted Caramel",
                     amount: 100,
                     price: 1.89,
                     SKU: "price_1Ld6sQARYjIsWfAVVHGqikNu",
-                    image: "./assets/products/transparent-caramel-nobg.png"
+                    image: "https://i.ibb.co/jTgf9kP/caramel.png"
                 },
                 {
-                    id: 2,
-                    title: "Marvellous Mars",
+                    id: 13,
+                    title: "Snickers",
                     amount: 100,
                     price: 1.89,
-                    SKU: "price_1Ld6s5ARYjIsWfAV1BvKOl7R",
-                    image: "./assets/products/transparent-mars-nobg.png"
+                    SKU: "price_1LdDrOARYjIsWfAVHjD43uu8",
+                    image: "https://i.ibb.co/TvjL9mf/blank.png"
                 },
                 {
-                    id: 3,
+                    id: 14,
                     title: "Unicorn Crunch",
                     amount: 100,
                     price: 1.89,
                     SKU: "price_1Ld6rdARYjIsWfAVf1ZTY8d7",
-                    image: "./assets/products/transparent-m&m-nobg.png"
+                    image: "https://i.ibb.co/kML4yzC/m-m.png"
                 }
             ]);
         }, 1000);
