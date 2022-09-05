@@ -21,6 +21,7 @@ app.post('/create-checkout-session', async (req, res) => {
   var productPrices = req.body.product_sku
   var arr = productPrices.split(',')
   var discountArray = []
+  var barsCoupon = null
 
   for (i = 0; i < arr.length; i++) {
     var first5 = arr[i].substring(0, 5)
@@ -55,10 +56,11 @@ app.post('/create-checkout-session', async (req, res) => {
   var discountCost = discountAmount * 67
 
   if (discountCost > 0) {
-    const coupon = await stripe.coupons.create({ amount_off: discountCost, id: "3Barsfor5", currency: "GBP" });
+    const coupon = await stripe.coupons.create({ amount_off: discountCost, currency: "GBP", name: '3Barsfor5' });
     discountArray.push({
-      coupon: '3Barsfor5',
+      coupon: `${coupon.id}`,
     })
+    barsCoupon = coupon.id
   }
 
   const session = await stripe.checkout.sessions.create({
@@ -85,7 +87,7 @@ app.post('/create-checkout-session', async (req, res) => {
 
   if (discountCost > 0) {
     const deleted = await stripe.coupons.del(
-      '3Barsfor5'
+      `${barsCoupon}`
     );
   }
 
