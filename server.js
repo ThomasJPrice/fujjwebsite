@@ -85,12 +85,6 @@ app.post('/create-checkout-session', async (req, res) => {
     cancel_url: `${YOUR_DOMAIN}/index.html`,
   });
 
-  if (discountCost > 0) {
-    const deleted = await stripe.coupons.del(
-      `${barsCoupon}`
-    );
-  }
-
   res.redirect(303, session.url);
 });
 
