@@ -199,7 +199,7 @@ function addProductToCart(title, price, productImg, priceSKU, button) {
     var cartItems = document.getElementsByClassName('cart-content')[0]
     var cartItemsNames = cartItems.getElementsByClassName('cart-product-title')
     for (var i = 0; i < cartItemsNames.length; i++) {
-        if (cartItemsNames[i].innerText == title) {
+        if (cartItemsNames[i].innerText == title && cartItemsNames[i].innerText !== 'Personalisation') {
             button.classList.remove('loading')
             alert('You have already added this item to cart.')
             return;
@@ -239,6 +239,7 @@ function updatetotal() {
         total = total + (price * quantity)
         cartContentList.push([priceID, quantity])
     }
+
     //PENCE
     total = Math.round(total * 100) / 100
 

@@ -23,7 +23,9 @@ app.post('/create-checkout-session', async (req, res) => {
   var discountArray = []
 
   for (i = 0; i < arr.length; i++) {
-    if (i % 2 == 0) {
+    var first5 = arr[i].substring(0, 5)
+
+    if (i % 2 == 0 && first5 === 'price') {
 
       lineItems.push(
         {
@@ -33,6 +35,7 @@ app.post('/create-checkout-session', async (req, res) => {
       )
 
       totalQuantity = totalQuantity + parseInt(arr[i + 1])
+
     }
   }
 
@@ -52,12 +55,12 @@ app.post('/create-checkout-session', async (req, res) => {
   var discountCost = discountAmount * 67
 
   if (discountCost > 0) {
-    const coupon = await stripe.coupons.create({amount_off: discountCost, id: "3Barsfor5", currency: "GBP"});
+    const coupon = await stripe.coupons.create({ amount_off: discountCost, id: "3Barsfor5", currency: "GBP" });
     discountArray.push({
       coupon: '3Barsfor5',
     })
   }
-  
+
   const session = await stripe.checkout.sessions.create({
     submit_type: "pay",
     billing_address_collection: 'auto',
@@ -86,8 +89,8 @@ app.post('/create-checkout-session', async (req, res) => {
     );
   }
 
-
   res.redirect(303, session.url);
 });
+
 
 app.listen(4242, () => console.log(`Running at 4242`));

@@ -328,7 +328,7 @@ function getProducts() {
                     amount: 100,
                     price: 1.89,
                     SKU: "price_1LdDtQARYjIsWfAVobLR3vzE",
-                    image: "https://i.ibb.co/TvjL9mf/blank.png"
+                    image: "https://i.ibb.co/DQpVyg1/biscoff.png"
                 },
                 {
                     id: 2,
