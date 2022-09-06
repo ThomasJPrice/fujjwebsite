@@ -23,6 +23,10 @@ nav {
     display: flex;
 }
 
+.underline:hover {
+    text-decoration: underline;
+}
+
 img {
     width: 100%;
 }

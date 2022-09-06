@@ -23,6 +23,14 @@ nav {
     display: flex;
 }
 
+.underline {
+    color: white;
+}
+
+.underline:hover {
+    text-decoration: underline;
+}
+
 img {
     width: 100%;
 }

@@ -12,7 +12,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(express.static('public'));
-const YOUR_DOMAIN = 'https://fujj.cyclic.app'
+const YOUR_DOMAIN = 'https://www.fujj.co.uk'
 app.post('/create-checkout-session', async (req, res) => {
 
   var lineItems = []
