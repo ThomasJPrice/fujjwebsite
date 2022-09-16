@@ -82,7 +82,7 @@ app.post('/create-checkout-session', async (req, res) => {
     mode: 'payment',
     discounts: discountArray,
     success_url: `${YOUR_DOMAIN}/success.html`,
-    cancel_url: `${YOUR_DOMAIN}/index.html`,
+    cancel_url: `${YOUR_DOMAIN}/`,
   });
 
   res.redirect(303, session.url);
