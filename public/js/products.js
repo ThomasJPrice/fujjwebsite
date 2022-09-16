@@ -328,7 +328,7 @@ function getProducts() {
                     amount: 100,
                     price: 1.89,
                     SKU: "price_1LdDtQARYjIsWfAVobLR3vzE",
-                    image: "https://i.ibb.co/DQpVyg1/biscoff.png"
+                    image: "./assets/products/biscoff.png"
                 },
                 {
                     id: 2,
@@ -336,7 +336,7 @@ function getProducts() {
                     amount: 100,
                     price: 1.89,
                     SKU: "price_1LdDrlARYjIsWfAVg1QXbHJf",
-                    image: "https://i.ibb.co/TvjL9mf/blank.png"
+                    image: "./assets/products/blank.png"
                 },
                 {
                     id: 3,
@@ -344,7 +344,7 @@ function getProducts() {
                     amount: 100,
                     price: 1.89,
                     SKU: "price_1LdDsuARYjIsWfAVQYyMppPa",
-                    image: "https://i.ibb.co/TvjL9mf/blank.png"
+                    image: "./assets/products/blank.png"
                 },
                 {
                     id: 4,
@@ -352,7 +352,7 @@ function getProducts() {
                     amount: 100,
                     price: 1.89,
                     SKU: "price_1LdDtHARYjIsWfAVAhjIwdL3",
-                    image: "https://i.ibb.co/TvjL9mf/blank.png"
+                    image: "./assets/products/blank.png"
                 },
                 {
                     id: 5,
@@ -360,7 +360,7 @@ function getProducts() {
                     amount: 100,
                     price: 1.89,
                     SKU: "price_1LdDt6ARYjIsWfAV9GXcpkjS",
-                    image: "https://i.ibb.co/TvjL9mf/blank.png"
+                    image: "./assets/products/blank.png"
                 },
                 {
                     id: 6,
@@ -368,7 +368,7 @@ function getProducts() {
                     amount: 100,
                     price: 1.89,
                     SKU: "price_1LdDs4ARYjIsWfAVbiwvo2P2",
-                    image: "https://i.ibb.co/TvjL9mf/blank.png"
+                    image: "./assets/products/blank.png"
                 },
                 {
                     id: 7,
@@ -376,7 +376,7 @@ function getProducts() {
                     amount: 100,
                     price: 1.89,
                     SKU: "price_1Ld6s5ARYjIsWfAV1BvKOl7R",
-                    image: "https://i.ibb.co/9VTQhXv/mars.png"
+                    image: "./assets/products/mars.png"
                 },
                 {
                     id: 8,
@@ -384,7 +384,7 @@ function getProducts() {
                     amount: 100,
                     price: 1.89,
                     SKU: "price_1LdDsHARYjIsWfAVciBQNXP2",
-                    image: "https://i.ibb.co/TvjL9mf/blank.png"
+                    image: "./assets/products/blank.png"
                 },
                 {
                     id: 9,
@@ -392,7 +392,7 @@ function getProducts() {
                     amount: 100,
                     price: 1.89,
                     SKU: "price_1LdDoBARYjIsWfAV72IQaLg2",
-                    image: "https://i.ibb.co/pj9xwRW/milkyway.png"
+                    image: "./assets/products/milkyway.png"
                 },
                 {
                     id: 10,
@@ -400,7 +400,7 @@ function getProducts() {
                     amount: 100,
                     price: 1.89,
                     SKU: "price_1LdDsfARYjIsWfAVZd0ai5V1",
-                    image: "https://i.ibb.co/TvjL9mf/blank.png"
+                    image: "./assets/products/blank.png"
                 },
                 {
                     id: 11,
@@ -408,7 +408,7 @@ function getProducts() {
                     amount: 100,
                     price: 1.89,
                     SKU: "price_1LdDrZARYjIsWfAVx99sCxk2",
-                    image: "https://i.ibb.co/TvjL9mf/blank.png"
+                    image: "./assets/products/blank.png"
                 },
                 {
                     id: 12,
@@ -416,7 +416,7 @@ function getProducts() {
                     amount: 100,
                     price: 1.89,
                     SKU: "price_1Ld6sQARYjIsWfAVVHGqikNu",
-                    image: "https://i.ibb.co/jTgf9kP/caramel.png"
+                    image: "./assets/products/caramel.png"
                 },
                 {
                     id: 13,
@@ -424,7 +424,7 @@ function getProducts() {
                     amount: 100,
                     price: 1.89,
                     SKU: "price_1LdDrOARYjIsWfAVHjD43uu8",
-                    image: "https://i.ibb.co/TvjL9mf/blank.png"
+                    image: "./assets/products/blank.png"
                 },
                 {
                     id: 14,
@@ -432,7 +432,7 @@ function getProducts() {
                     amount: 100,
                     price: 1.89,
                     SKU: "price_1Ld6rdARYjIsWfAVf1ZTY8d7",
-                    image: "https://i.ibb.co/kML4yzC/m-m.png"
+                    image: "./assets/products/m-m.png"
                 }
             ]);
         }, 1000);
