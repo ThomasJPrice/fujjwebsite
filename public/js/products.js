@@ -336,7 +336,7 @@ function getProducts() {
                     amount: 100,
                     price: 1.89,
                     SKU: "price_1LdDrlARYjIsWfAVg1QXbHJf",
-                    image: "./assets/products/blank.png"
+                    image: "./assets/products/orange.png"
                 },
                 {
                     id: 3,
@@ -344,7 +344,7 @@ function getProducts() {
                     amount: 100,
                     price: 1.89,
                     SKU: "price_1LdDsuARYjIsWfAVQYyMppPa",
-                    image: "./assets/products/blank.png"
+                    image: "./assets/products/oreo.png"
                 },
                 {
                     id: 4,
