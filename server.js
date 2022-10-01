@@ -6,6 +6,12 @@ var bodyParser = require('body-parser')
 var app = express()
 var os = require("os");
 const path = require('path');
+var errorHandler = require('express-error-handler'),
+  handler = errorHandler({
+    static: {
+      '404': 'public/404.html'
+    }
+  });
 
 // parse application/json
 app.use(bodyParser.json())
@@ -89,9 +95,11 @@ app.post('/create-checkout-session', async (req, res) => {
   res.redirect(303, session.url);
 });
 
-// 404
-app.use((req, res, next) => {
-  res.status(404).sendFile(path.join(__dirname, '/public/404.html'))
-})
+// After all your routes...
+// Pass a 404 into next(err)
+app.use(errorHandler.httpError(404));
+
+// Handle all unhandled errors:
+app.use(handler);
 
 app.listen(4242, () => console.log(`Running at 4242`));
