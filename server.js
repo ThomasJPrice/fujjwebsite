@@ -5,6 +5,7 @@ const express = require('express');
 var bodyParser = require('body-parser')
 var app = express()
 var os = require("os");
+const path = require('path');
 
 // parse application/json
 app.use(bodyParser.json())
@@ -84,8 +85,11 @@ app.post('/create-checkout-session', async (req, res) => {
     success_url: `${YOUR_DOMAIN}/success.html`,
     cancel_url: `${YOUR_DOMAIN}/`,
   });
-
   res.redirect(303, session.url);
 });
+
+app.use((req, res, next) => {
+  res.status(404).sendFile(path.join(__dirname, '/public/404.html'))
+})
 
 app.listen(4242, () => console.log(`Running at 4242`));
