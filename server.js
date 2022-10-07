@@ -80,6 +80,9 @@ app.post('/create-checkout-session', async (req, res) => {
       },
     ],
     line_items: lineItems,
+    phone_number_collection: {
+      enabled: true,
+    },
     mode: 'payment',
     discounts: discountArray,
     success_url: `${YOUR_DOMAIN}/success.html`,
