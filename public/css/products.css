@@ -858,6 +858,9 @@ footer {
         align-items: center;
     }
 
+    .cart-img {
+        pointer-events: none;
+    }
 
 }
 

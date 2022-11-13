@@ -323,6 +323,14 @@ function getProducts() {
         setTimeout(() => {
             resolve([
                 {
+                    id: 0,
+                    title: "Festive Favourites Gift Box",
+                    amount: '4 x 100',
+                    price: 8.49,
+                    SKU: "price_1M3gbvARYjIsWfAVT77YneUm",
+                    image: "./assets/products/festive-favourites.png"
+                },
+                {
                     id: 1,
                     title: "Biscoff",
                     amount: 100,

@@ -528,6 +528,7 @@ h2 {
 
 /* RESPONSIVENESS */
 
+
 @media (max-width: 550px) {
     .btn__menu {
         display: block;
@@ -559,6 +560,10 @@ h2 {
 
     button {
         font-size: 18px;
+    }
+
+    .cart-img {
+        pointer-events: none;
     }
 }
 
