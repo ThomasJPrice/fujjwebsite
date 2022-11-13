@@ -1068,8 +1068,8 @@ footer {
         align-items: center;
     }
 
-    .cart-quantity {
-        font-size: 2rem;
+    .cart-img {
+        pointer-events: none;
     }
 
 }
