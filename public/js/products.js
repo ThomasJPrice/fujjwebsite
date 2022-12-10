@@ -441,7 +441,23 @@ function getProducts() {
                     price: 1.89,
                     SKU: "price_1Ld6rdARYjIsWfAVf1ZTY8d7",
                     image: "./assets/products/m-m.png"
-                }
+                },
+                {
+                    id: 15,
+                    title: "Vegan Peanut Butter",
+                    amount: 100,
+                    price: 1.89,
+                    SKU: "price_1MDQEoARYjIsWfAVZ8L90gzp",
+                    image: "./assets/products/vegan-pb.png"
+                },
+                {
+                    id: 16,
+                    title: "Vegan Double Chocolate",
+                    amount: 100,
+                    price: 1.89,
+                    SKU: "price_1MDQFKARYjIsWfAVVOg6oQTb",
+                    image: "./assets/products/vegan-dc.png"
+                },
             ]);
         }, 1000);
     });
