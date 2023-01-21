@@ -614,12 +614,18 @@ h2 {
     margin-top: -29px;
     height: 400px;
     overflow: hidden;
+    z-index: 1;
+}
+
+.second-banner {
+    z-index: 2;
 }
 
 .banner-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 0% 15%;
 }
 
 .banner-txt {

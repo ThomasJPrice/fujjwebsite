@@ -324,11 +324,11 @@ function getProducts() {
             resolve([
                 {
                     id: 0,
-                    title: "Festive Favourites Gift Box",
-                    amount: '4 x 100',
-                    price: 8.49,
-                    SKU: "price_1M3gbvARYjIsWfAVT77YneUm",
-                    image: "./assets/products/festive-favourites.png"
+                    title: "Valentine's Duo",
+                    amount: '2 x 100',
+                    price: 3.50,
+                    SKU: "price_1MSkn7ARYjIsWfAVHUENtOco",
+                    image: "./assets/products/valentine-duo.png"
                 },
                 {
                     id: 1,
