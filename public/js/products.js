@@ -323,14 +323,6 @@ function getProducts() {
         setTimeout(() => {
             resolve([
                 {
-                    id: 0,
-                    title: "Valentine's Duo",
-                    amount: '2 x 100',
-                    price: 3.50,
-                    SKU: "price_1MSkn7ARYjIsWfAVHUENtOco",
-                    image: "./assets/products/valentine-duo.png"
-                },
-                {
                     id: 1,
                     title: "Biscoff",
                     amount: 100,
