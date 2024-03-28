@@ -605,3 +605,20 @@ h2 {
         width: 280px;
     }
 }
+
+.redBanner {
+    width: 100%;
+    background-color: #503621;
+    color: white;
+}
+
+.redBanner p {
+    max-width: 1200px;
+    width: 100%;
+    padding: 12px 24px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}
