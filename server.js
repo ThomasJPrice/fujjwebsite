@@ -88,7 +88,7 @@ app.post('/create-checkout-session', async (req, res) => {
     success_url: `${YOUR_DOMAIN}/success.html`,
     cancel_url: `${YOUR_DOMAIN}/`,
   });
-  res.redirect(303, session.url);
+  res.redirect(303, 'https://fujj.co.uk');
 });
 
 app.use((req, res, next) => {
